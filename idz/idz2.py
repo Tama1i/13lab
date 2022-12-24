@@ -3,18 +3,15 @@
 
 import sys
 
-def car_displ(*args):
-    k = 0
-    o = 0
-    s1 = 0
+def car_displ(**cars):
     res = []
-    for i in args:
-        res.append(i)
+    for t,m in cars.items():
+        res.append(f"{t} {m}")
            
     return (res)
 
 
 if __name__ == "__main__":
-    print(car_displ("toyota "," mark 1 ","mark 2 ", " mark3 "))
-    print(car_displ("nissan "," 350 Z "," 450 Z "," 250fx "))
+    print(car_displ(mark1 = " toyota ",mark2 = " toyota ", mark3  =" toyota"))
+    print(car_displ(Z350 = " nissan ",Z450 = " nissan ",fx250 = " nissan "))
   
